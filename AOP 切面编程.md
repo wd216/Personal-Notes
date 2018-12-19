@@ -29,4 +29,7 @@
 - Spring AOP 借鉴了 AspectJ 的非常多的特性，比如说， Spring AOP 可以使用跟 AspectJ 完全一样的注解来声明切面使用
 
 	- 当然要明白，虽然我们可以使用 @AspectJ 的注解，但后面运行的还是实打实的 Spring AOP。
-- Spring 中可以非常简单的将其他 AOP 的实现无缝整合到框架中，所以，如果你觉得 Spring AOP 的实现太逊，你完全可以将其他实现整合进来，取代 Spring AOP。  
+- Spring 中可以非常简单的将其他 AOP 的实现无缝整合到框架中，所以，如果你觉得 Spring AOP 的实现太逊，你完全可以将其他实现整合进来，取代 Spring AOP。
+
+
+# 2018/12/18 14:59:01    
