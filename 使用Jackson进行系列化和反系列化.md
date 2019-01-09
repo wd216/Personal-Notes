@@ -73,3 +73,17 @@
 # 打印的结果是 #
 	java 对象转换为 Json 字符串{"id":0,"title":"陈子寒","body":"框架终究是框架"}
 	Json 字符串转换为 java 对象News{id=0, title='陈子寒', body='框架终究是框架'}
+
+## 利用 Gson 进行系列化 ##
+	List<News> newsList = Arrays.asList(
+                new News("yuandan", "放假"),
+                new News("春节", "快来了")
+        );
+        String newsListStr = om.writeValueAsString(newsList);
+        News[] newsArray = om.readValue(newsListStr, News[].class);
+        List<News> newsList1 = om.readValue(newsListStr, new TypeReference<List<News>>() {});
+        System.out.println(newsList1);
+			
+		//利用 Gson 对 Json 字符串 反系列化 为 java 对象	
+        List<News> newsList2 = new Gson().fromJson(newsListStr, new TypeToken<List<News>>() {}.getType());
+        System.out.println(newsList2);
